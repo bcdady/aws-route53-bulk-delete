@@ -8,11 +8,12 @@ This is based off of the ReleaseHub article titled ["How to Delete Hundreds or T
 We assume you have [AWS CLI Profiles](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) setup
 
 First script will query the AWS CLI for ResourceRecords and split them into individual files.
+```
+./route53-jq.sh [zonename] [profile] [maxitems] [valuequery]
 
-  ./route53-jq.sh [zonename] [profile] [maxitems] [valuequery]
-
-  ./route53-jq.sh example.com myawsprofile 100 1.1.1.1
-
+./route53-jq.sh example.com myawsprofile 100 1.1.1.1
+```
 Next script will loop through all files and run the output JSON against the AWS CLI
-
-  ./bulk-record-delete.sh example.com myawsprofile
+```
+./bulk-record-delete.sh example.com myawsprofile
+```
