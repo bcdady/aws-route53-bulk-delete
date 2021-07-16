@@ -7,7 +7,7 @@ maxitems=$3
 valuequery=$4
 example=$(cat <<-END
 ./route53-jq.sh [zonename] [profile] [maxitems] [valuequery]
-ie ./bulk-record-delete.sh example.com myawsprofile 100 1.1.1.1
+ie ./route53-jq.sh example.com myawsprofile 100 1.1.1.1
 END)
 
 if [ -z $zonename ] && [ -z $profile ] && [ -z $maxitems] && [ -z $valuequery]
