@@ -5,10 +5,8 @@ zonename=$1
 profile=$2
 maxitems=$3
 valuequery=$4
-example=$(cat <<-END
-./route53-jq.sh [zonename] [profile] [maxitems] [valuequery]
-ie ./route53-jq.sh example.com myawsprofile 100 1.1.1.1
-END)
+example="./route53-jq.sh [zonename] [profile] [maxitems] [valuequery]
+ie ./route53-jq.sh example.com myawsprofile 100 1.1.1.1"
 
 if [ -z $zonename ] && [ -z $profile ] && [ -z $maxitems] && [ -z $valuequery]
 then

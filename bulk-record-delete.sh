@@ -3,10 +3,8 @@
 
 zonename=$1
 profile=$2
-example=$(cat <<-END
-./bulk-record-delete.sh [zonename] [profile]
-ie ./bulk-record-delete.sh example.com myawsprofile
-END)
+example="./bulk-record-delete.sh [zonename] [profile]
+ie ./bulk-record-delete.sh example.com myawsprofile"
 
 if [ -z $zonename ] && [ -z $profile ]
 then
